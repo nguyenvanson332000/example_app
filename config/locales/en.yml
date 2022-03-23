@@ -5,6 +5,11 @@ en:
       home: "Home"
       help: "Help"
       login: "Login"
+      about: "About"
+    footer:
+      about: "About"
+      contact: "Contact"
+      new: "News"
     application:
       title: "| Ruby on Rails Tutorial Sample App"
   static_pages:
@@ -25,3 +30,8 @@ en:
       title: "About?"
       h1_html: "About"
       para_html: "The <a href=\"https://www.railstutorial.org/\"><em>Ruby on Rails Tutorial</em></a>, is a to teach web development with <a href=\"https://rubyonrails.org/\">Ruby on Rails</a>.This is the sample app for the tutorial."
+  users:
+    new:
+      title: "Sign Up"
+      h1_html: "Sign up"
+      para_html: "This will be a signup page for new users."

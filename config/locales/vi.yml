@@ -5,6 +5,11 @@ vi:
       home: "Trang Chủ"
       help: "Trợ Giúp"
       login: "Đăng Nhập"
+      about: "Vấn Đề"
+    footer:
+      about: "Vấn Đề"
+      contact: "Liên Hệ"
+      new: "Thông Tin Mới"
     application:
       title: "| Ruby on Rails Tutorial Sample App"
   static_pages:
@@ -25,3 +30,8 @@ vi:
       title: "Vấn đề?"
       h1_html: "<h1>Đang tìm kiếm <i><i>?</h1>"
       para_html: "Sách <a href=\"https://www.railstutorial.org/\"><em>Ruby on Rails Tutorial</em></a>, là sách dạy về lập trình <a href=\"https://rubyonrails.org/\">Ruby on Rails</a> Đây là ứng dụng mẫu cho hướng dẫn."
+  users:
+    new:
+      title: "Đăng Ký"
+      h1_html: "Đăng Ký"
+      para_html: "Đây sẽ là trang đăng ký cho người dùng mới."
