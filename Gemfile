@@ -22,6 +22,11 @@ group :development, :test do
   gem "byebug", platforms: [:mri, :mingw, :x64_mingw]
 end
 
+group :production do
+  gem "pg", "~> 0.18"
+  gem "rails_12factor", "~> 0.0.1"
+end
+
 group :development do
   gem "web-console", ">= 4.1.0"
   gem "rack-mini-profiler", "~> 2.0"

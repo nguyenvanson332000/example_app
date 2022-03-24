@@ -1,5 +1,8 @@
 vi:
   app_name: "Sample_App"
+  controller:
+    user:
+      flash_success: "Chào mừng đến với Sample App!"
   layouts:
     header:
       home: "Trang Chủ"
@@ -35,3 +38,12 @@ vi:
       title: "Đăng Ký"
       h1_html: "Đăng Ký"
       para_html: "Đây sẽ là trang đăng ký cho người dùng mới."
+      name: "Họ Tên"
+      email: "Địa Chỉ Mail"
+      password: "Mật Khẩu"
+      confirmation: "Xác nhận lại mật khẩu"
+      btn_submit: "Đăng ký tài khoản"
+  shared:
+    error:
+      title: "Biểu mẫu chứa"
+      error: "lỗi"
