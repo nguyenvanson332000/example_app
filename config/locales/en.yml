@@ -3,12 +3,18 @@ en:
   controller:
     user:
       flash_success: "Welcome to the Sample App!"
+    session:
+      flash_danger: "Invalid email/password combination"
   layouts:
     header:
       home: "Home"
       help: "Help"
       login: "Login"
       about: "About"
+      Account: "Account"
+      Profile: "Profile"
+      Settings: "Settings"
+      Logout: "Log out"
     footer:
       about: "About"
       contact: "Contact"
@@ -47,3 +53,11 @@ en:
     error:
       title: "The form contains"
       error: "error"
+  sessions:
+    new:
+      title: "Sign In"
+      h1_html: "Sign In"
+      login: "Log in"
+      span_html: "<span>Remember me on this computer</span>"
+      content: "New user? "
+      signup: "Sign up now!"

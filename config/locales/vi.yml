@@ -3,12 +3,18 @@ vi:
   controller:
     user:
       flash_success: "Chào mừng đến với Sample App!"
+    session:
+      flash_danger: "Kết hợp email / mật khẩu không hợp lệ"
   layouts:
     header:
       home: "Trang Chủ"
       help: "Trợ Giúp"
       login: "Đăng Nhập"
       about: "Vấn Đề"
+      Account: "Tài Khoản"
+      Profile: "Thông Tin Cá Nhân"
+      Settings: "Cài Đặt"
+      Logout: "Đăng Xuất"
     footer:
       about: "Vấn Đề"
       contact: "Liên Hệ"
@@ -47,3 +53,11 @@ vi:
     error:
       title: "Biểu mẫu chứa"
       error: "lỗi"
+  sessions:
+    new:
+      title: "Đăng Nhập"
+      h1_html: "Đăng Nhập"
+      login: "Đăng Nhập"
+      span_html: "<span>Ghi Nhớ Đăng Nhập Trên Máy Tính</span>"
+      content: "Đăng Ký Tài Khoản Mới ?"
+      signup: "Đăng Ký Ngay"
