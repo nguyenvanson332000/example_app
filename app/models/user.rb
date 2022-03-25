@@ -8,7 +8,8 @@ class User < ApplicationRecord
                     uniqueness: { case_sensitive: false },
                     presence: true
   has_secure_password
-  validates :password, length: { minimum: Settings.model.user.password_length_min }
+  validates :password, length: { minimum: Settings.model.user.password_length_min },
+                        allow_blank: true
 
   class << self
     def digest(string)

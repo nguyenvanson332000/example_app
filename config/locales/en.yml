@@ -3,6 +3,10 @@ en:
   controller:
     user:
       flash_success: "Welcome to the Sample App!"
+      not_found: "User not found"
+      profile_success: "Profile updated"
+      profile_fail: "Profile update failed, Please try again!"
+      login: "Please log in."
     session:
       flash_danger: "Invalid email/password combination"
   layouts:
@@ -15,6 +19,7 @@ en:
       Profile: "Profile"
       Settings: "Settings"
       Logout: "Log out"
+      Users: "Users"
     footer:
       about: "About"
       contact: "Contact"
@@ -49,6 +54,11 @@ en:
       password: "Password"
       confirmation: "Confirmation"
       btn_submit: "Create my account"
+    edit:
+      title: "Edit user"
+      h1_html: "Update your profile"
+      btn_submit: "Save changes"
+      Change: "Change"
   shared:
     error:
       title: "The form contains"

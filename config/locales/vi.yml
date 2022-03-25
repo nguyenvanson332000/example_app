@@ -3,6 +3,10 @@ vi:
   controller:
     user:
       flash_success: "Chào mừng đến với Sample App!"
+      not_found: "Không tìm thấy người dùng"
+      profile_success: "Cập nhật hồ sơ thành công"
+      profile_fail: "Cập nhật hồ sơ thất bại, Vui lòng thử lại!"
+      login: "Vui lòng đăng nhập"
     session:
       flash_danger: "Kết hợp email / mật khẩu không hợp lệ"
   layouts:
@@ -15,6 +19,7 @@ vi:
       Profile: "Thông Tin Cá Nhân"
       Settings: "Cài Đặt"
       Logout: "Đăng Xuất"
+      Users: "Người Dùng"
     footer:
       about: "Vấn Đề"
       contact: "Liên Hệ"
@@ -49,6 +54,11 @@ vi:
       password: "Mật Khẩu"
       confirmation: "Xác nhận lại mật khẩu"
       btn_submit: "Đăng ký tài khoản"
+    edit:
+      title: "Cập Nhật"
+      h1_html: "Chỉnh sửa thông tin cá nhân"
+      btn_submit: "Xác nhận lưu thay đổi"
+      Change: "Thay đổi"
   shared:
     error:
       title: "Biểu mẫu chứa"
