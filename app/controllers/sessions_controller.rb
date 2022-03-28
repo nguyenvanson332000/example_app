@@ -3,14 +3,29 @@ class SessionsController < ApplicationController
   end
 
   def create
-    user = User.find_by(email: params[:session][:email].downcase)
-    if user&.authenticate(params[:session][:password])
+    session_params = params[:session]
+    @user = User.find_by(email: params[:session][:email].downcase)
+    if @user&.authenticate(params[:session][:password])
+      check_activated @user
+    else
+      flash[:danger] = t "controller.session.flash_danger"
+      render :new
+    end
+  end
+
+  def login(user)
+    log_in user
+    params[:session][:remember_me] == "1" ? remember(user) : forget(user)
+    redirect_back_or user
+  end
+
+  def check_activated(user)
+    if user.activated
       log_in user
-      params[:session][:remember_me] == "1" ? remember(user) : forget(user)
       redirect_back_or user
     else
-      flash[:danger] = t "controller.user.flash_danger"
-      render :new
+      flash[:warning] = t "controller.session.flash_warning"
+      edirect_to root_url
     end
   end
 

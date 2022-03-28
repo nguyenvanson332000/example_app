@@ -7,8 +7,21 @@ vi:
       profile_success: "Cập nhật hồ sơ thành công"
       profile_fail: "Cập nhật hồ sơ thất bại, Vui lòng thử lại!"
       login: "Vui lòng đăng nhập"
+      flash_info: "Vui lòng kiểm tra email để kích hoạt tài khoản của bạn."
+      delete_success: "Người dùng đã bị xóa"
+      delete_fail: "Người dùng chưa bị xóa"
     session:
       flash_danger: "Kết hợp email / mật khẩu không hợp lệ"
+      flash_warning: "Tài khoản chưa được kích hoạt. Hãy kiểm tra email của bạn để biết liên kết kích hoạt."
+    activation:
+      success: "Tài khoản đã được kích hoạt!"
+      danger: "Liên kết kích hoạt không hợp lệ"
+    reset:
+      flash_info: "Email được gửi kèm theo hướng dẫn đặt lại mật khẩu"
+      flash_danger: "Không tìm thấy địa chỉ email"
+      error_blank: "không được để trống"
+      success: "Mật khẩu đã được đặt lại."
+      danger: "Đặt lại mật khẩu đã hết hạn."
   layouts:
     header:
       home: "Trang Chủ"
@@ -45,6 +58,10 @@ vi:
       h1_html: "<h1>Đang tìm kiếm <i><i>?</h1>"
       para_html: "Sách <a href=\"https://www.railstutorial.org/\"><em>Ruby on Rails Tutorial</em></a>, là sách dạy về lập trình <a href=\"https://rubyonrails.org/\">Ruby on Rails</a> Đây là ứng dụng mẫu cho hướng dẫn."
   users:
+    index:
+      title: "Tất cả người dùng"
+      h1_html: "Tất cả người dùng"
+      btn_delete: "Xóa"
     new:
       title: "Đăng Ký"
       h1_html: "Đăng Ký"
@@ -71,3 +88,26 @@ vi:
       span_html: "<span>Ghi Nhớ Đăng Nhập Trên Máy Tính</span>"
       content: "Đăng Ký Tài Khoản Mới ?"
       signup: "Đăng Ký Ngay"
+  password_reset:
+    edit:
+      title: "Đổi Mật Khẩu"
+      h1_html: "Đổi Mật Khẩu"
+      btn_submit: "Cập Nhật Mật Khẩu"
+    new:
+      title: "Quên Mật Khẩu"
+      h1_html: "Quên Mật Khẩu"
+      btn_submit: "Xác Nhận"
+  user_mailer:
+    password:
+      h1_html: "Ứng dụng mẫu"
+      p1_html: "Chào "
+      p2_html: "Chào mừng bạn đến với Ứng dụng mẫu! Nhấp vào liên kết bên dưới để kích hoạt tài khoản của bạn:"
+    activation:
+      h1_html: "Đặt lại mật khẩu"
+      p1_html: "Để đặt lại mật khẩu của bạn, hãy nhấp vào liên kết bên dưới:"
+      p2_html: "Liên kết này sẽ hết hạn sau hai giờ. Nếu bạn không yêu cầu đặt lại mật khẩu của mình, vui lòng bỏ qua email này và mật khẩu của bạn sẽ vẫn như cũ"
+      password_reset: "Đặt lại mật khẩu"
+  mailers:
+    user:
+      account_activation: "Kích hoạt tài khoản"
+      password_reset: "Đặt lại mật khẩu"

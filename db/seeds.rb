@@ -10,13 +10,17 @@ User.create!(name: "Nguyen Van Son",
              email: "nguyenvanson332000@gmail.com",
              password: "son332000",
              password_confirmation: "son332000",
-             admin: true)
-1000.times do |n|
+             admin: true,
+             activated: true,
+             activated_at: Time.zone.now)
+100.times do |n|
   name = Faker::Name.name
   email = "NguyenVan#{n + 1}@railstutorial.org"
   password = "password"
   User.create!(name: name,
                email: email,
                password: password,
-               password_confirmation: password)
+               password_confirmation: password,
+               activated: true,
+               activated_at: Time.zone.now)
 end

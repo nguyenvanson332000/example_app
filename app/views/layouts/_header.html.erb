@@ -19,7 +19,7 @@
               <li><%= link_to t(".Settings"), edit_user_path(current_user) %></li>
               <li class="divider"></li>
               <li>
-                <%= button_to t(".Logout"), logout_path, method: :delete %>
+                <%= link_to t(".Logout"), logout_path, method: :delete %>
               </li>
             </ul>
           </li>
