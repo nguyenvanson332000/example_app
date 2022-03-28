@@ -22,6 +22,11 @@ en:
       error_blank: "can't be empty"
       success: "Password has been reset."
       danger: "Password reset has expired."
+    micropost:
+      create_success: "Micropost created!"
+      destroy_fail: "Deleted fail"
+      destroy_success: "Micropost deleted"
+      flash_danger: "Micropost invalid"
   layouts:
     header:
       home: "Home"
@@ -88,6 +93,7 @@ en:
       span_html: "<span>Remember me on this computer</span>"
       content: "New user? "
       signup: "Sign up now!"
+      forgot_password: "Forgot Password?"
   password_reset:
     edit:
       title: "Reset password"

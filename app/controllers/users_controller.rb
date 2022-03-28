@@ -13,6 +13,7 @@ class UsersController < ApplicationController
 
   def show
     load_user_or_redirect
+    @microposts = @user.microposts.paginate(page: params[:page])
   end
 
   def create

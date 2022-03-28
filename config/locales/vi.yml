@@ -22,6 +22,11 @@ vi:
       error_blank: "không được để trống"
       success: "Mật khẩu đã được đặt lại."
       danger: "Đặt lại mật khẩu đã hết hạn."
+    micropost:
+      create_success: "Đã tạo micropost!"
+      destroy_fail: "Đã xóa không thành công"
+      destroy_success: "Micropost đã bị xóa"
+      flash_danger: "Micropost không hợp lệ"
   layouts:
     header:
       home: "Trang Chủ"
@@ -88,6 +93,7 @@ vi:
       span_html: "<span>Ghi Nhớ Đăng Nhập Trên Máy Tính</span>"
       content: "Đăng Ký Tài Khoản Mới ?"
       signup: "Đăng Ký Ngay"
+      forgot_password: "Quên Mật Khẩu?"
   password_reset:
     edit:
       title: "Đổi Mật Khẩu"
