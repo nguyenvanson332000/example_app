@@ -1,0 +1,9 @@
+{
+  "editor.formatOnSave": true,
+  "editor.formatOnPaste": true,
+  "editor.formatOnType": true,
+  "prettier.insertPragma": true,
+  "prettier.requireConfig": true,
+  "prettier.requirePragma": true,
+  "prettier.flattenTernaries": true
+}
