@@ -7,9 +7,10 @@ import Rails from "@rails/ujs"
 import Turbolinks from "turbolinks"
 import * as ActiveStorage from "@rails/activestorage"
 import "channels"
-require( "jquery" ).start()
-require("@rails/ujs").start()
+require( "jquery" )
+require("@rails/ujs")
 import "bootstrap"
+require("packs/handle_request_user")
 
 Rails.start()
 Turbolinks.start()
