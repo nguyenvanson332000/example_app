@@ -9,7 +9,7 @@
     Posted <%= time_ago_in_words micropost.created_at %> ago.
     <% if current_user? micropost.user %>
       <%= link_to t("users.index.btn_delete"), micropost, method: :delete, data: {confirm: "You sure?"} %>
-      <%= link_to "comment"%>
     <% end %>
+    <%= link_to "comment", show_path(id: micropost.id)%>
   </span>
 </li>

@@ -1,4 +1,6 @@
 class StaticPagesController < ApplicationController
+  before_action :load_micropost, only: :show
+
   def home
     if logged_in?
       @micropost = current_user.microposts.build
@@ -6,9 +8,25 @@ class StaticPagesController < ApplicationController
     end
   end
 
+  def show
+    # @comments = @micropost.comments.newest
+    @comments = Comment.includes(:user, :replies).where(micropost_id: @micropost.id).newest
+    @comment = Comment.new
+  end
+
   def help
   end
 
   def about
+  end
+
+  private
+
+  def load_micropost
+    @micropost = Micropost.find_by(id: params[:id])
+    return if @micropost
+
+    flash[:warning] = "k tim thay micropost"
+    redirect_to root_path
   end
 end

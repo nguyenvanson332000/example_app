@@ -23,7 +23,11 @@
     <h3><%= @title %></h3>
     <% if @users.any? %>
       <ul class="users follow">
-        <%= render @users %>
+        <% @users.each do |user| %>
+          <li>
+            <%= render user %>
+          </li>
+        <% end %>
       </ul>
       <%= will_paginate %>
     <% end %>
