@@ -1,4 +1,5 @@
 class Micropost < ApplicationRecord
+  has_many :comments, dependent: :destroy
   belongs_to :user
   has_one_attached :image
   validates :user_id, presence: true
@@ -7,7 +8,7 @@ class Micropost < ApplicationRecord
                                     message: "must be a valid image format" },
                     size: { less_than: 5.megabytes,
                             message: "should be less than 5MB" }
-  scope :recent_posts, -> { order created_at: :desc }
+  default_scope -> { order(created_at: :desc) }
 
   def display_image
     image.variant resize_to_limit: [500, 500]
