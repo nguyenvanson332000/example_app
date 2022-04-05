@@ -10,7 +10,8 @@ import "channels"
 require( "jquery" )
 require("@rails/ujs")
 import "bootstrap"
-require("packs/handle_request_user")
+require( "packs/handle_request_user" )
+require("packs/handle_request_comment")
 
 Rails.start()
 Turbolinks.start()

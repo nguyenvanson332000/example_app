@@ -1,6 +1,6 @@
 class CommentsController < ApplicationController
-    before_action :load_micropost, only: %i(create)
-    before_action :load_comment, only: %i(edit update destroy)
+  before_action :load_micropost, only: %i(create)
+  before_action :load_comment, only: %i(edit update destroy)
 
   def new
     # @micropost = Micropost.find(params[:micropost_id])
@@ -12,15 +12,17 @@ class CommentsController < ApplicationController
     @comment = current_user.comments.build comment_params
     @comment.micropost_id = @micropost.id
     if @comment.save
-      flash[:success] ="binh luan thanh cong"
+      flash[:success] = "binh luan thanh cong"
       redirect_to show_path(id: @comment.micropost_id)
     else
-      flash[:warning] ="binh luan that bai"
+      flash[:warning] = "binh luan that bai"
       redirect_to static_page_path params[:micropost_id]
     end
   end
 
-  def edit; end
+  def edit
+    @comment = Comment.find_by id: params[:id]
+  end
 
   def update
     if @comment.update comment_params
@@ -40,6 +42,7 @@ class CommentsController < ApplicationController
     end
     redirect_to show_path(id: @comment.micropost_id)
   end
+
   private
 
   def comment_params

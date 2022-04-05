@@ -10,12 +10,10 @@ Rails.application.routes.draw do
     get "login", to: "sessions#new"
     post "login", to: "sessions#create"
     delete "logout", to: "sessions#destroy"
-    # get "password_resets/new"
-    # get "password_resets/edit"
 
     resources :account_activations, only: :edit
     resources :password_resets, only: %i(new create edit update)
-    resources :microposts, only: %i(create destroy)
+    resources :microposts, only: %i(create destroy new)
     resources :users do
       member do
         get :following, :followers

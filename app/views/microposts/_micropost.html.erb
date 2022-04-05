@@ -1,15 +1,26 @@
-<li id="micropost-<%= micropost.id %>">
+<li id="micropost-<%= micropost.id %>" class="micropost" data-id="<%=micropost.id%>" >
   <%= link_to gravatar_for(micropost.user, size: 50), micropost.user %>
   <span class="user"><%= link_to micropost.user.name, micropost.user %></span>
   <span class="content">
     <%= micropost.content%>
     <%= image_tag micropost.display_image if micropost.image.attached? %>
   </span>
-  <span class="timestamp">
+  <span class="row timestamp">
     Posted <%= time_ago_in_words micropost.created_at %> ago.
     <% if current_user? micropost.user %>
       <%= link_to t("users.index.btn_delete"), micropost, method: :delete, data: {confirm: "You sure?"} %>
     <% end %>
     <%= link_to "comment", show_path(id: micropost.id)%>
+    <%# <%= button_tag "Comment", class: "btn-comment add-form-comment-btn", data: {micropost_id: micropost.id} %>
+    <div class="comments-<%= micropost.id %>"></div>
+    <div class="form-group display-hidden comment-form">
+      <span class="input-comment">
+        <%= text_field_tag :comment_content, nil, class: "form-control comment-content",
+                            placeholder: "New comment" %>
+        <%= button_tag :Submit, class: "btn btn-primary comment-submit"%>
+      </span>
+    </div>
+    <%= link_to 'comment', new_micropost_path(micropost: micropost.id), remote: true, class: 'btn btn-primary' %>
+    <div id="comment-form-<%= micropost.id %>"></div>
   </span>
 </li>

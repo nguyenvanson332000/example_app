@@ -15,7 +15,7 @@
           </p>
           <p class = "func-button">
             <%= link_to 'reply', new_comment_path(parent_id: comment.id), remote: true, class: 'btn btn-primary' %>
-            <%= link_to 'edit', edit_comment_path(comment.id) ,class: "btn btn-primary" %>
+            <%= link_to 'edit', edit_comment_path(id: comment.id), remote: true ,class: "btn btn-primary" %>
             <%= link_to "destroy",comment_path(comment.id), method: :delete, data: { confirm: "ban co muon xoa comment" }, class: "btn btn-danger"%>
           </p>
           <p>
@@ -25,6 +25,7 @@
       <% end %>
       <div class="reply">
         <div id="reply-form-<%= comment.id %>"></div>
+        <div id="edit-form-<%= comment.id %>"></div>
         <% if comment.replies.any? %>
           <% comment.replies.each do |reply| %>
             <%= render partial: 'comments/reply', locals: { reply: reply } %>
